@@ -3,33 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>画像とボタンの表示</title>
+    <title>画像タップで画面遷移</title>
 </head>
 <body>
     <div style="text-align: center; margin-top: 50px;">
-        <!-- 画像の表示 -->
-        <img src="doragon_card_omote_get.jpg" alt="表示したい画像" style="max-width: 100%; height: auto;">
-        
-        <!-- URL入力とボタンの表示 -->
-        <div style="margin-top: 20px;">
-            <form id="urlForm" onsubmit="return navigateToURL()">
-                <input type="text" id="urlInput" placeholder="遷移先のURLを入力してください" style="padding: 10px; width: 80%; font-size: 16px;">
-                <br><br>
-                <button type="submit" style="padding: 10px 20px; font-size: 16px;">次のページへ</button>
-            </form>
-        </div>
+        <!-- 指定のURLに遷移する画像リンク -->
+        <a href="https://example.com" id="imageLink">
+            <img src="dragon_card_omote_get.jpg" alt="表示したい画像" style="max-width: 100%; height: auto;">
+        </a>
     </div>
 
     <script>
-        function navigateToURL() {
-            const url = document.getElementById('urlInput').value;
-            if (url) {
-                window.location.href = url;
-            } else {
-                alert("遷移先のURLを入力してください。");
-            }
-            return false; // フォームのデフォルト送信を防止
-        }
+        // 必要に応じて画像リンクのhrefを動的に変更することも可能です
+        // document.getElementById('imageLink').href = 'https://new-url.com';
     </script>
 </body>
 </html>
